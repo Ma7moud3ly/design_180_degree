@@ -1,4 +1,4 @@
-# MaterialForm
+# 180 Degree
 Simple android app design based on material components and data/view binding.
 
 <div align="center">
