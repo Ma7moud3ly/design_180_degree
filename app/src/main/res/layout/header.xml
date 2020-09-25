@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:id="@+id/header_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/appColor"
+        android:orientation="horizontal"
+        android:padding="@dimen/profile_header_padding"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:layout_width="@dimen/profile_header_icon_wh"
+            android:layout_height="@dimen/profile_header_icon_wh"
+            android:foreground="?attr/selectableItemBackground"
+            android:clickable="true"
+            android:src="@drawable/ic_title_bar_logo" />
+
+        <TextView
+            android:id="@+id/header_title"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:foreground="?attr/selectableItemBackground"
+            android:clickable="true"
+            android:gravity="center"
+            android:text="Header"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6"
+            android:textColor="@color/white" />
+
+        <ImageView
+            android:layout_width="@dimen/profile_header_icon_wh"
+            android:foreground="?attr/selectableItemBackground"
+            android:clickable="true"
+            android:layout_height="@dimen/profile_header_icon_wh"
+            android:padding="4dp"
+            android:src="@drawable/ic_notifi" />
+
+    </LinearLayout>
+
+</layout>

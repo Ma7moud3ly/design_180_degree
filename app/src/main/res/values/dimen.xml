@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--login layout-->
+    <dimen name="login_background_height">300dp</dimen>
+    <dimen name="hr_margin">40dp</dimen>
+    <dimen name="vr_margin">10dp</dimen>
+    <dimen name="login_form_top_margin">250dp</dimen>
+
+    <!--home layout-->
+    <dimen name="home_item_img_wh">50dp</dimen>
+
+    <!--profile layout-->
+    <dimen name="profile_header_icon_wh">30dp</dimen>
+    <dimen name="profile_footer_icon_wh">20dp</dimen>
+    <dimen name="profile_header_padding">15dp</dimen>
+    <dimen name="profile_header_bg_height">100dp</dimen>
+    <dimen name="profile_img_wh">40dp</dimen>
+    <dimen name="profile_home_icon_wh">50dp</dimen>
+
+
+</resources>

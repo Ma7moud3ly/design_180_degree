@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/profile_header_bg_height"
+            android:background="@color/appColor"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!--header/app bar-->
+        <include
+            android:id="@+id/header"
+            layout="@layout/header" />
+
+        <!--user info-->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/user_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/hr_margin"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/boarder_radius3"
+            android:padding="15dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/header">
+
+            <ImageView
+                android:id="@+id/user_profile"
+                android:layout_width="@dimen/profile_img_wh"
+                android:layout_height="@dimen/profile_img_wh"
+                android:src="@drawable/avatar_temp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/user_name"
+                style="@style/profile.TextViewBold"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="bottom|start"
+                android:text="Ahmed Aly"
+                app:layout_constraintBottom_toTopOf="@id/user_job"
+                app:layout_constraintEnd_toStartOf="@id/user_edit"
+                app:layout_constraintStart_toEndOf="@id/user_profile"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/user_job"
+                style="@style/profile.TextView"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:gravity="start|top"
+                android:text="Sales"
+                app:layout_constraintBottom_toTopOf="@id/customers"
+                app:layout_constraintEnd_toStartOf="@id/user_edit"
+                app:layout_constraintStart_toEndOf="@id/user_profile"
+                app:layout_constraintTop_toBottomOf="@id/user_name" />
+
+            <ImageView
+                android:id="@+id/user_edit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="4dp"
+                android:src="@drawable/ic_edit"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/customers"
+                style="@style/profile.TextViewBold"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="200"
+                app:layout_constraintEnd_toStartOf="@id/sales"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/user_profile" />
+
+            <TextView
+                android:id="@+id/sales"
+                style="@style/profile.TextViewBold"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="2000"
+                app:layout_constraintEnd_toStartOf="@id/offers"
+                app:layout_constraintStart_toEndOf="@id/customers"
+                app:layout_constraintTop_toBottomOf="@id/user_profile" />
+
+
+            <TextView
+                android:id="@+id/offers"
+                style="@style/profile.TextViewBold"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="200"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/sales"
+                app:layout_constraintTop_toBottomOf="@id/user_profile" />
+
+
+            <TextView
+                android:id="@+id/customers_label"
+                style="@style/profile.TextView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/customer"
+                app:layout_constraintEnd_toStartOf="@id/sales_label"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/customers" />
+
+            <TextView
+                android:id="@+id/sales_label"
+                style="@style/profile.TextView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/sales"
+                app:layout_constraintEnd_toStartOf="@id/offers_label"
+                app:layout_constraintStart_toEndOf="@id/customers_label"
+                app:layout_constraintTop_toBottomOf="@id/customers" />
+
+
+            <TextView
+                android:id="@+id/offers_label"
+                style="@style/profile.TextView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/offer"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/sales_label"
+                app:layout_constraintTop_toBottomOf="@id/customers" />
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="0dp"
+                android:background="@color/white"
+                app:layout_constraintBottom_toBottomOf="@id/customers_label"
+                app:layout_constraintStart_toEndOf="@id/customers"
+                app:layout_constraintTop_toTopOf="@id/customers" />
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="0dp"
+                android:background="@color/white"
+                app:layout_constraintBottom_toBottomOf="@id/sales_label"
+                app:layout_constraintStart_toEndOf="@id/sales"
+                app:layout_constraintTop_toTopOf="@id/sales" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <!--buttons/tabs-->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/user_layout">
+
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_notifications"
+                style="@style/profile.Button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/hr_margin"
+                android:layout_marginVertical="@dimen/vr_margin"
+                android:backgroundTint="@color/white"
+                android:text="@string/notifications"
+                app:icon="@drawable/ic_notifi"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_marginEnd="15dp"
+                android:elevation="5dp"
+                android:paddingVertical="15dp"
+                android:src="@drawable/arrow"
+                app:layout_constraintBottom_toBottomOf="@id/btn_notifications"
+                app:layout_constraintEnd_toEndOf="@id/btn_notifications"
+                app:layout_constraintTop_toTopOf="@id/btn_notifications"
+                app:tint="@color/colorPrimary" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_settings"
+                style="@style/profile.Button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/hr_margin"
+                android:layout_marginVertical="@dimen/vr_margin"
+                android:backgroundTint="@color/white"
+                android:text="@string/settings"
+                app:icon="@drawable/settings"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/btn_notifications" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_marginEnd="15dp"
+                android:elevation="5dp"
+                android:paddingVertical="15dp"
+                android:src="@drawable/arrow"
+                app:layout_constraintBottom_toBottomOf="@id/btn_settings"
+                app:layout_constraintEnd_toEndOf="@id/btn_settings"
+                app:layout_constraintTop_toTopOf="@id/btn_settings"
+                app:tint="@color/colorPrimary" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_log_out"
+                style="@style/profile.Button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/hr_margin"
+                android:layout_marginVertical="@dimen/vr_margin"
+                android:backgroundTint="@color/white"
+                android:text="@string/log_out"
+                app:icon="@drawable/logout"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/btn_settings" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_marginEnd="15dp"
+                android:elevation="5dp"
+                android:paddingVertical="15dp"
+                android:src="@drawable/arrow"
+                app:layout_constraintBottom_toBottomOf="@id/btn_log_out"
+                app:layout_constraintEnd_toEndOf="@id/btn_log_out"
+                app:layout_constraintTop_toTopOf="@id/btn_log_out"
+                app:tint="@color/colorPrimary" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <!--circular home button-->
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/btn_home"
+            android:layout_width="@dimen/profile_home_icon_wh"
+            android:layout_height="@dimen/profile_home_icon_wh"
+            android:layout_marginBottom="15dp"
+            android:background="@color/colorPrimary"
+            android:clickable="true"
+            android:elevation="3dp"
+            android:foreground="?attr/selectableItemBackground"
+            android:padding="5dp"
+            android:scaleType="center"
+            android:src="@drawable/ic_home"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:shapeAppearanceOverlay="@style/circular.imageView.shapeAppearanceOverlay"
+            app:tint="@color/white" />
+
+        <!--footer-->
+        <include layout="@layout/footer" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <!--products and sold_items objects  passed from home fragment-->
+    <data>
+
+        <variable
+            name="products"
+            type="Integer" />
+
+        <variable
+            name="sold_items"
+            type="Integer" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <LinearLayout
+            android:id="@+id/layout_top"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/appColor"
+            android:orientation="vertical"
+            android:paddingBottom="20dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <!--header or app bar-->
+            <include
+                android:id="@+id/header"
+                layout="@layout/header" />
+
+            <!--products and sold items cards-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:paddingHorizontal="30dp"
+                android:weightSum="2"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/header">
+
+                <include
+                    layout="@layout/item_home_card1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="5dp"
+                    android:layout_weight="1"
+                    app:count="@{products}"
+                    app:title="@{@string/home_sold_item}" />
+
+                <include
+                    layout="@layout/item_home_card1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:layout_weight="1"
+                    app:count="@{sold_items}"
+                    app:title="@{@string/home_products}" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <!--items cards-->
+        <LinearLayout
+            android:id="@+id/layout_items"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:paddingHorizontal="20dp"
+            android:paddingVertical="10dp"
+            android:weightSum="2"
+            app:layout_constraintStart_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/layout_top">
+
+            <include
+                android:id="@+id/card_add_item"
+                layout="@layout/item_home_card2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="5dp"
+                android:layout_weight="1"
+                app:img="@{@drawable/add_item}"
+                app:title="@{@string/home_add_item}" />
+
+            <include
+                android:id="@+id/card_search_items"
+                layout="@layout/item_home_card2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_weight="1"
+                app:img="@{@drawable/search_item}"
+                app:title="@{@string/home_search_item}" />
+
+        </LinearLayout>
+
+        <!--circular home button-->
+        <com.google.android.material.imageview.ShapeableImageView
+            android:layout_width="@dimen/profile_home_icon_wh"
+            android:layout_height="@dimen/profile_home_icon_wh"
+            android:layout_marginBottom="15dp"
+            android:background="@color/colorPrimary"
+            android:clickable="true"
+            android:elevation="3dp"
+            android:foreground="?attr/selectableItemBackground"
+            android:padding="5dp"
+            android:scaleType="center"
+            android:src="@drawable/ic_home"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:shapeAppearanceOverlay="@style/circular.imageView.shapeAppearanceOverlay"
+            app:tint="@color/white" />
+
+        <!--footer-->
+        <include
+            android:id="@+id/footer"
+            layout="@layout/footer" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
