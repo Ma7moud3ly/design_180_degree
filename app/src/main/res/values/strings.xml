@@ -5,7 +5,10 @@
     <string name="user_name">User Name</string>
     <string name="password">Password</string>
     <string name="login">Login</string>
-
+    <string name="url">http://lovinmybag.beetleware.com/api/auth</string>
+    <string name="url_sold_items">http://lovinmybag.beetleware.com/api/sold-items</string>
+    <string name="url_products">http://lovinmybag.beetleware.com/api/products</string>
+    <string name="url_profile">http://lovinmybag.beetleware.com/api/profile-show</string>
     <!--home layout-->
     <string name="home">Home</string>
     <string name="home_add_item">Add New Item</string>

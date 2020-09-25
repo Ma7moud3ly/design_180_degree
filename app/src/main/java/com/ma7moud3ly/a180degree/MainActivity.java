@@ -6,6 +6,7 @@ import androidx.fragment.app.FragmentTransaction;
 
 import android.os.Bundle;
 
+import com.ma7moud3ly.a180degree.fragments.LoginFragment;
 import com.ma7moud3ly.a180degree.fragments.SplashFragment;
 
 public class MainActivity extends AppCompatActivity implements NavigationHost {

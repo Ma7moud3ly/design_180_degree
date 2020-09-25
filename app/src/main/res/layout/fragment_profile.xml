@@ -31,7 +31,7 @@
             app:layout_constraintTop_toBottomOf="@id/header">
 
             <ImageView
-                android:id="@+id/user_profile"
+                android:id="@+id/user_avatar"
                 android:layout_width="@dimen/profile_img_wh"
                 android:layout_height="@dimen/profile_img_wh"
                 android:src="@drawable/avatar_temp"
@@ -45,10 +45,10 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:gravity="bottom|start"
-                android:text="Ahmed Aly"
+                android:text="User Name"
                 app:layout_constraintBottom_toTopOf="@id/user_job"
                 app:layout_constraintEnd_toStartOf="@id/user_edit"
-                app:layout_constraintStart_toEndOf="@id/user_profile"
+                app:layout_constraintStart_toEndOf="@id/user_avatar"
                 app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
@@ -60,7 +60,7 @@
                 android:text="Sales"
                 app:layout_constraintBottom_toTopOf="@id/customers"
                 app:layout_constraintEnd_toStartOf="@id/user_edit"
-                app:layout_constraintStart_toEndOf="@id/user_profile"
+                app:layout_constraintStart_toEndOf="@id/user_avatar"
                 app:layout_constraintTop_toBottomOf="@id/user_name" />
 
             <ImageView
@@ -81,7 +81,7 @@
                 android:text="200"
                 app:layout_constraintEnd_toStartOf="@id/sales"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/user_profile" />
+                app:layout_constraintTop_toBottomOf="@id/user_avatar" />
 
             <TextView
                 android:id="@+id/sales"
@@ -92,7 +92,7 @@
                 android:text="2000"
                 app:layout_constraintEnd_toStartOf="@id/offers"
                 app:layout_constraintStart_toEndOf="@id/customers"
-                app:layout_constraintTop_toBottomOf="@id/user_profile" />
+                app:layout_constraintTop_toBottomOf="@id/user_avatar" />
 
 
             <TextView
@@ -104,7 +104,7 @@
                 android:text="200"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@id/sales"
-                app:layout_constraintTop_toBottomOf="@id/user_profile" />
+                app:layout_constraintTop_toBottomOf="@id/user_avatar" />
 
 
             <TextView
