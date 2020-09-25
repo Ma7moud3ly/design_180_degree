@@ -1,5 +1,6 @@
 # 180 Degree
-Simple android app design based on material components and data/view binding.
+Simple android app design basedp on MVVN architecture pattern,material components and data/view binding.
+Server Requests and Image Caching implemented using google Volley and Gson.
 
 <div align="center">
   <img src="imgs/img1.png" alt="drawing" width="300"/>
